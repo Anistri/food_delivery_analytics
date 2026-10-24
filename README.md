@@ -10,12 +10,12 @@ Python (EDA) and Power BI analysis of the factors that make food deliveries slow
 
 ## 🎯 Business Problem
 
-**Primary question:** "What factors make food deliveries slow, and what can the company do to make them faster?"
+**Primary question:** *"What factors cause delivery delays, and how can the company optimize delivery times?"*
 
-**Key objectives**
-1. Identify the factors that affect delivery time the most.
-2. Describe patterns in delivery time by distance, traffic, weather, time of day, and vehicle type.
-3. Provide data-driven recommendations to reduce slow deliveries.
+**Key Objectives:**
+1. **Identify Key Drivers:** Find the main factors that affect delivery times the most.
+2. **Analyze Variable Patterns:** Examine delivery performance across distance, traffic, weather, time of day, and vehicle type.
+3. **Provide Actionable Solutions:** Recommend business strategies to reduce delay rates and improve overall delivery speed.
 
 ---
 
@@ -120,13 +120,12 @@ Time of day (55.2-57.5 min on average) and vehicle type (56.0-58.2 min). Courier
 
 ## 💡 Recommendations
 
-| No | Recommendation | Supporting data |
-|---|---|---|
-| 1 | Handle long-distance orders first (service radius, nearest courier, extra pickup points) | 90.8% of orders at 15-20 km are slow |
-| 2 | Show realistic delivery time estimates based on distance | 34.3 min at 0-5 km vs 79.4 min at 15-20 km |
-| 3 | Prepare for heavy traffic (alternative routes, dynamic estimates) | High traffic: 64.8 min and 54.3% slow, vs Low traffic: 52.9 min and 36.3% slow |
-| 4 | Prepare for bad weather (longer estimates, courier incentives) | Snowy: 67.1 min and 59.8% slow, vs Clear: 53.2 min and 35.6% slow |
-| 5 | Coordinate restaurants and couriers so preparation does not hold up delivery | Each extra preparation minute adds about 0.9 minutes |
+| No | Strategic Recommendation | Priority | Supporting Data / Context |
+|---|---|---|---|
+| **1** | **Optimize High-Distance Delivery Radius** | **High** | Limit service coverage zone or apply dynamic delivery fees for orders >15 km (which suffer a severe **90.8% delay rate**). |
+| **2** | **Implement Distance & Traffic-Based Dynamic ETA** | **High** | Adjust arrival time estimates dynamically based on actual distance brackets and peak traffic hours (**+12 mins** in high traffic). |
+| **3** | **Adjust Operations for Severe Weather** | **Medium** | Automatically extend ETAs and manage customer expectations during snowy or severe weather conditions (**59.8% slow rate**). |
+| **4** | **Synchronize Kitchen Prep & Courier Pickup** | **Medium** | Dispatch couriers when food preparation is nearly complete to eliminate idle waiting time (**+0.9 mins per prep minute**). |
 
 Vehicle type and time of day do not need to be a priority, since the data shows little difference.
 
