@@ -65,7 +65,7 @@ Python (EDA) and Power BI analysis of the factors that make food deliveries slow
 
 Out of 1,000 orders, **415 (41.5%) were slow**. Average delivery time is 56.7 minutes (median 55.5, maximum 153).
 
-### 📏 1. Distance is the strongest factor
+### 📏 1. Distance is the Primary Driver
 Correlation with delivery time: 0.78.
 
 | Distance group | Average delivery time | Slow delivery rate |
@@ -77,7 +77,7 @@ Correlation with delivery time: 0.78.
 
 Each extra kilometer adds about 3 minutes (trend line slope 3.03).
 
-### 🚦 2. Heavy traffic adds about 12 minutes
+### 🚦 2. Heavy Traffic Congestion Impact
 
 | Traffic level | Average delivery time | Slow delivery rate |
 |---|---|---|
@@ -85,7 +85,7 @@ Each extra kilometer adds about 3 minutes (trend line slope 3.03).
 | Medium | 56.5 min | 40.2% |
 | High | 64.8 min | 54.3% |
 
-### 🌧️ 3. Bad weather slows deliveries, snow the most
+### 🌧️ 3. Severe Weather Conditions Impact
 
 | Weather | Average delivery time |
 |---|---|
@@ -97,7 +97,7 @@ Each extra kilometer adds about 3 minutes (trend line slope 3.03).
 
 The slow delivery rate is 59.8% in snow versus 35.6% in clear weather.
 
-### 🔥 4. Distance and traffic together
+### 🔥 4. Combined Impact of Distance & Traffic
 
 Slow delivery rate (%) by distance group and traffic level:
 
@@ -110,10 +110,10 @@ Slow delivery rate (%) by distance group and traffic level:
 
 Long-distance orders are already often slow even when traffic is low (84.9% at 15-20 km), and high traffic makes every distance group worse.
 
-### 🍳 5. Preparation time has a moderate effect
+### 🍳 5. Moderate Impact of Kitchen Preparation Time 
 Correlation is 0.31, and each extra minute of preparation adds about 0.9 minutes to delivery time.
 
-### ➖ 6. Little effect
+### ➖ 6. Low Impact Factors (Non-Critical Variables)
 Time of day (55.2-57.5 min on average) and vehicle type (56.0-58.2 min). Courier experience has a small effect (correlation -0.09, about -0.7 minutes per year of experience).
 
 ---
@@ -154,10 +154,10 @@ Max Delivery Time = MAX(Food_Delivery_Clean[Delivery_Time_min])
 
 ## ⚠️ Limitations
 
-- The data is simulated, so findings are patterns from public data and should be validated with real operational data before use.
-- The 60-minute threshold for "slow" is an assumption. A different threshold changes the percentages.
-- Correlation shows a relationship, not proof of cause and effect. The effect of each recommendation should be tested (for example with an A/B test).
-- Empty values in 4 columns were filled with the most frequent value or the median.
+1. **Synthetic Data Constraints:** The dataset is simulated from public sources rather than extracted from live operational logs. Consequently, findings reflect synthetic patterns and should be validated against actual enterprise data prior to operational implementation.
+2. **SLA Threshold Sensitivity:** The 60-minute cutoff for "slow deliveries" is an analytical assumption. Altering this threshold will correspondingly adjust the delay percentages and failure rates.
+3. **Correlation vs. Causation:** Statistical correlations (such as distance and traffic impacts) demonstrate relationships rather than direct cause-and-effect. Strategic recommendations should be rigorously evaluated via controlled experimentation (e.g., A/B testing).
+4. **Data Imputation Assumptions:** Missing values across the four columns were filled using mode and median imputation. While this preserves sample size (N = 1,000) and prevents data loss, it inherently introduces minor distributional assumptions.
 
 ---
 
